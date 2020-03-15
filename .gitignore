@@ -9,3 +9,4 @@
 !/integrate_each_to_atlas_rmDEG/code/*.R
 !README.md
 !.gitignore
+!*/

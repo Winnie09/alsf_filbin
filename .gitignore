@@ -1,0 +1,11 @@
+*
+!identifyCellType/code/*.R
+#!identifyCellType/plot
+!infercnv/*.R
+#!infercnv/output/infercnv.png
+!quantification/code/*.R
+!R
+!data/code/*.R
+!integrate_each_to_atlas_rmDEG/code/*.R
+!README.md
+!.gitignore

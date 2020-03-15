@@ -1,8 +1,6 @@
 *
 !**/identifyCellType/code/*.R
-#!identifyCellType/plot
 !**/infercnv/*.R
-#!infercnv/output/infercnv.png
 !/quantification/code/*.R
 !**/R
 !/data/code/*.R

@@ -12,7 +12,6 @@ To do it, run following R file to generate .sh files :
 ```{r }
 /users/whou/alsf_filbin/quantification/code/01_make_sh.R 
 ```
-<!---
 
 And then execute all  the .sh files genereated.
 
@@ -21,14 +20,12 @@ Gene expression of all cells from all plates of all samples are concatenated as 
 ```{r }
 /users/whou/alsf_filbin/data/code/01_logTPM.R
 ```
-<!---
 We retain cells with at least 1000 genes expressed and alignment rate > 50\% (762 cells retained).
 We retain genes with $\log2$-scaled TPM $> 0.1$ in at least 1\% of cells (27556 genes retained).
 
 ```{r }
 /users/whou/alsf_filbin/data/code/02_logTPM_filtered.R
 ```
-<!---
 
 Each sample is normalize by library size (by SCRAN).
 For each gene, a trend is fitted to the variance against the mean. The fitted value of this trend represents technical variability, for example due to sequencing at a given mean, under the assumption that each cell has the same amount of spike-in RNA and therefore the differences in observed expression account for measurement errors.
@@ -39,7 +36,6 @@ Top 15 Principal components (PCs) are used to perform further dimension reductio
 ```{r }
 /users/whou/alsf_filbin/data/code/03_pca_umap.R
 ```
-<!---
 
 
 
@@ -49,7 +45,6 @@ To do it, run following R file:
 ```{r }
 /users/whou/alsf_filbin/identifyCellType/code/01_identify_celltype.R
 ```
-<!---
   
 ## Integration and Visualization with Atlas
 In this analysis, we identify the cell types of each cell using La Manno (2016, Cell) datasets as the reference.

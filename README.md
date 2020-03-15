@@ -20,8 +20,8 @@ Gene expression of all cells from all plates of all samples are concatenated as 
 ```{r }
 /users/whou/alsf_filbin/data/code/01_logTPM.R
 ```
-We retain cells with at least 1000 genes expressed and alignment rate > 50\% (762 cells retained).
-We retain genes with $\log2$-scaled TPM $> 0.1$ in at least 1\% of cells (27556 genes retained).
+We retain cells with at least 1000 genes expressed and alignment rate > 50% (762 cells retained).
+We retain genes with log2-scaled TPM > 0.1 in at least 1% of cells (27556 genes retained).
 
 ```{r }
 /users/whou/alsf_filbin/data/code/02_logTPM_filtered.R

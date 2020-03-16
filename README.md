@@ -1,4 +1,4 @@
-Workflow for Analyzing Single-nuclei-sequencing Pediatric Gliblastoma Cells
+Workflow for Analyzing Single-nuclei-sequencing Pediatric Glioblastoma Cells
 ====
 ## Introductions
 We analyze the single-nuclei sequencing (sNuc-seq) data of six human brain tumors generated in Dr. Mariella G. Filbin`s lab. We detected astrocytes and neuronal cells by comparing our data to reference datasets. Our primary goals are: finding neurons and astrocytes, identify normal and tumor cells, and check wether any transcripts are secreted. At the current stage, we have found cells similar to neurons and astrocytes, and apply copy number variation analysis to differentiate normal and tumor cells. 

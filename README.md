@@ -1,9 +1,7 @@
 Workflow for Analyzing Single-nuclei-sequencing Pediatric Gliblastoma Cells
 ====
-
 ## Introductions
 We analyze the single-nuclei sequencing (sNuc-seq) data of six human brain tumors generated in Dr. Mariella G. Filbin`s lab. We detected astrocytes and neuronal cells by comparing our data to reference datasets. Our primary goals are: finding neurons and astrocytes, identify normal and tumor cells, and check wether any transcripts are secreted. At the current stage, we have found cells similar to neurons and astrocytes, and apply copy number variation analysis to differentiate normal and tumor cells. 
-  
   
 ## Quantification
 We apply HISAT2 (v2.1.0) for alignment, and StringTie (v2.0.3) for transcript assembly and quantification.
@@ -36,40 +34,33 @@ Top 15 Principal components (PCs) are used to perform further dimension reductio
 ```{r }
 /users/whou/alsf_filbin/data/code/03_pca_umap.R
 ```
-
-
-
 ## Celltypes Identification 
 SingleR is applied to identify the celltypes by comparing the cells with two reference datasets: La Manno (2016, Cell) dataset and  Nowakowski (2017, Science) dataset.   
-To do it, run following R file:
+To do it, run the following R file:
 ```{r }
 /users/whou/alsf_filbin/identifyCellType/code/01_identify_celltype.R
 ```
-  
 ## Integration and Visualization with Atlas
 In this analysis, we identify the cell types of each cell using La Manno (2016, Cell) datasets as the reference.
 Since the La Manno dataset consists of mouse and human cells sequenced in fludigm c1 protocol, and Filbin`s data is human cells, we apply Seurat (v3.0) to align these datasets. 
 As a data integration method, Seurat utilizes canonical correlation analysis (CCA) to identify correlated gene modules that are present in both datasets, and then mutual nearest neighbors (MNN) of the cells were identified as ``anchors`` to integrate the datasets.
 Each sample is integrated with La Manno data separately.
 
-
-To do it, run following R file:
+To do it, run the following R file:
 ```{r }
 /users/whou/alsf_filbin/data/integrate_each_to_atlas_rmDEG/code/01_integrate.R
 /users/whou/alsf_filbin/data/integrate_each_to_atlas_rmDEG/code/02_umap.R
 /users/whou/alsf_filbin/data/integrate_each_to_atlas_rmDEG/code/03_plot_umap.R
 ```
-<!---
 
   
 ## Copy Number Variation Analysis
 We apply inferCNV (v.1.3.4) to compare our data to the normal human cells in La Manno datasets. 
-To do it, run following R file:
+To do it, run the following R file:
 ```{r }
 /users/whou/alsf_filbin/data/infercnv/01_make.R
 /users/whou/alsf_filbin/data/infercnv/02_run_infercnv.R
 ```
-<!---
   
 ## Contact the Author
 Author: Wenpin Hou
